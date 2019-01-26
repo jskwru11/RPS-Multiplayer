@@ -1,0 +1,60 @@
+/* html {
+    font-size: 62.5%;
+} */
+
+.header-title {
+    display: flex;
+    justify-content: center;
+    background: #a39cbe;
+    padding: .9rem;
+}
+
+#title {
+    font-size: 3.5rem;
+    color: white;
+    
+}
+
+.main-body {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+#inputForm {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.player-one, .game-results, .player-two {
+    width: 20rem;
+    height: 20rem;
+    border: .1rem solid black;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+#chatForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+
+
+
+#chatroom {
+    width: 60rem;
+    height: 10rem;
+    border: .2rem solid #666;
+    margin: 1rem 0 1rem 0;
+    padding: .2rem;
+}
+
+#chatInput {
+    width: 50rem;
+}
