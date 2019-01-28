@@ -13,7 +13,7 @@ const addChatMessage = (name, message) => {
     const displayName = name;
     const userMessage = message;
 
-    $('#chatroom').append(`<p>${displayName}: ${userMessage}</p>`);
+    $('#chatroom').append(`${displayName}: ${userMessage}</br>`);
 };
 
 const ref = database.ref("/chat");

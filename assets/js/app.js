@@ -6,7 +6,9 @@ authentication.onAuthStateChanged(user => {
     }
 });
 
-$('#inputForm').on('submit', submitCreateAccount);
+$(document).on('click', '#formBtn', submitCreateAccount);
 
 $('#chatForm').on("submit", sendChatMessage);
+
+$(document).on('click', '#logout', logoutUser);
 

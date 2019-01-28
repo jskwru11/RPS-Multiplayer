@@ -7,18 +7,62 @@
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
     <header class="header-title">
-        <h2 id="title">Rock, Paper, and Scissors</h2>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#"><h2 id="title">Rock Paper Scissors</h2></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="form-inline my-2 my-lg-0">
+                </form>
+                <!-- Button trigger modal -->
+                <button type="button" id="modal-btn" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">
+                        Login
+                </button>
+
+                <div class="modal" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="loginModalLabel">Login</h4>
+                                <button class="close" data-dismiss="modal" aria-label="Close">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="form" name="form" action="">
+                                    <div class="form-group">
+                                        <label for="entry-displayname">Display Name</label>
+                                        <input type="text" id="entry-displayname" placeHolder="Display Name" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="entry-email">Email</label>
+                                        <input type="email" id="entry-email" placeHolder="user@email.com" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="entry-password">Password</label>
+                                        <input type="password" id="entry-password" placeHolder="password" class="form-control">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" form="form" id ="formBtn" class="btn btn-primary">Login</button>
+                                <button class="btn btn-primary" data-dismiss="modal" >Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+      
+            </div>
+        </nav>
+                  
+        <!-- <h2 id="title">Rock, Paper, and Scissors</h2> -->
     </header>
-    <form action="" class="input-group" id="inputForm">
-        <input type="text" class="form-control" placeholder="name" id="entry-displayname">
-        <input type="email" class="form-control" placeholder="player@email.com" id="entry-email">
-        <input type="password" class="form-control" placeholder="password" id="entry-password">
-        <button type="login" class="btn btn-primary"id="auth-login">Login</button>
-    </form>
     <main class="main-body">
         <div class="player-one">Waiting for player...</div>
         <div class="game-results">game results</div>
@@ -30,7 +74,7 @@
         <button type="submit" class="chat-item">Send</button>
     </form>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
     <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
     <script src="./assets/js/firebase/firebase.js"></script>
     <script src="./assets/js/components/session.js"></script>
@@ -41,6 +85,8 @@
     <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-messaging.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-functions.js"></script> -->
+
+
     
     
 

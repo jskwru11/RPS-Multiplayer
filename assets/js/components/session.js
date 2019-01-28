@@ -27,6 +27,9 @@ const submitCreateAccount = (event) => {
        const errorMessage = error.message;
        console.log(errorCode, errorMessage);
    });
+   $('#loginModal').modal('toggle');
+   $('#modal-btn').hide();
+   $('#navbarSupportedContent').prepend(`<button type="button" id="logout" class="btn btn-primary">Logout</button>`)
 };
 
 
@@ -39,6 +42,14 @@ const signInWithEmailAndPassword = (event) => {
     const password = document.querySelector("#password");
 
     authentication.signInWithEmailAndPassword(email.value, password.value);
+};
+
+const logoutUser = () => {
+    authentication.signOut().then(() => {
+        console.log("user signed out");
+    }).catch(error => console.log(`user not able to logout: ${error}`));
+    $('#logout').hide();
+    $('#modal-btn').show();
 };
 
 // authentication.onAuthStateChanged(authStateChangeListener);
