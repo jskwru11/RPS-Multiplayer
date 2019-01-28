@@ -6,26 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
     <header class="header-title">
         <h2 id="title">Rock, Paper, and Scissors</h2>
     </header>
-    <form action="" class="input-group" id="inputForm">
-        <input type="text" class="form-control" placeholder="name" id="entry-displayname">
-        <input type="email" class="form-control" placeholder="player@email.com" id="entry-email">
-        <input type="password" class="form-control" placeholder="password" id="entry-password">
-        <button type="login" class="btn btn-primary"id="auth-login">Login</button>
+    <form action="" id="inputForm">
+        <input type="text" id="playerName" placeholder="Name">
+        <input type="email" id="playerEmail" placeholder="player@email.com">
+        <button type="submit">Start</button>
     </form>
+
     <main class="main-body">
         <div class="player-one">Waiting for player...</div>
         <div class="game-results">game results</div>
         <div class="player-two">Waiting for player...</div>
     </main>
     <form action="" id="chatForm">
-        <div id="chatroom" class="chat-item"></div>
+        <div id="chatroom" class="chat-item">
+        </div>
         <input type="text" class="chat-item" placeholder="Enter your Message" id="chatInput">
         <button type="submit" class="chat-item">Send</button>
     </form>
@@ -33,8 +33,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
     <script src="./assets/js/firebase/firebase.js"></script>
-    <script src="./assets/js/components/session.js"></script>
-    <script src="./assets/js/components/chat.js"></script>
     <script src="./assets/js/app.js"></script>
     <!-- <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-database.js"></script>

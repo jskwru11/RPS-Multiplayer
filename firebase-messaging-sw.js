@@ -1,3 +1,6 @@
+importScripts('https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js');
+importScripts('https://www.gstatic.com/firebasejs/5.8.1/firebase-messaging.js');
+
   // Initialize Firebase
   var config = {
     apiKey: "AIzaSyA-djv8O8wMZ5E7CCdvfTD8Q2ooZD2Tlig",
@@ -9,6 +12,13 @@
   };
   firebase.initializeApp(config);
 
-  const database = firebase.database();
   const messaging = firebase.messaging();
-  const authentication = firebase.auth();
+
+  messaging.setBackgrounMessageHandler(payload => {
+      console.log(payload);
+      const title = 'hello world';
+      const options = {
+        body: payload.data.status
+      };
+      return self.registration.showNotification(title, options);
+  });
